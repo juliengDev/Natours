@@ -56,10 +56,10 @@ body {
   color: transparent;
   letter-spacing: 2px;
   transition: all 0.2s;
-  &:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
-    text-shadow: $default-text-shadow;
-  }
+  // &:hover {
+  //   transform: skewY(2deg) skewX(15deg) scale(1.1);
+  //   text-shadow: $default-text-shadow;
+  // }
 }
 .heading-tertiary {
   font-size: $default-font-size;
