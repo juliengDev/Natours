@@ -42,10 +42,7 @@
     &::after {
       background-color: $color-primary;
     }
-    @include respond(phone) {      
-      left: 50%;
-      transform: translateX(-50%);   
-    }
+    
   }
   &::after {
     content: "";

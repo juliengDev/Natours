@@ -265,12 +265,6 @@ body {
 .btn--green::after {
   background-color: #55c57a;
 }
-@media only screen and (max-width: 37.5em) {
-  .btn--green {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
 .btn::after {
   content: "";
   display: inline-block;
