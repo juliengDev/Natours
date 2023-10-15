@@ -6,6 +6,10 @@
   border-radius: 3px;
   box-shadow: $default-box-shadow;
 
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+
   transition: transform 0.3s;
   &__icon {
     font-size: 6rem;
@@ -19,6 +23,9 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    @include respond(tab-port) {
+     margin-bottom: 0;
+    }
   }
   &:hover {
     transform: translateY(-1.5rem) scale(1.03);

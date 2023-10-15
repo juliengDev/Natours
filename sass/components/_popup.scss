@@ -9,6 +9,14 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+  
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);    
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, 0.3);
+
+  }
+
   &:target {
     opacity: 1;
     visibility: visible;
@@ -25,21 +33,42 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.4s 0.3s;
+    @include respond(phone) {
+      display:block;
+
+    }
+    
   }
   &__left {
     width: 33.333333%;
     display: table-cell;
+    @include respond(phone) {
+      display:block;
+      width: 100%;
+      padding: 3rem 0;
+      
+    }
+   
   }
   &__right {
     width: 66.666667%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+    @include respond(phone) {
+      display:block;
+      width: 100%;     
+    }
   }
   &__img {
     display: block;
     max-width: 100%;
     height: auto;
+    @include respond(phone) {      
+      width: 50%;
+      margin: 0 auto;     
+    }
+    
   }
   &__text {
     font-size: 1.5rem;
